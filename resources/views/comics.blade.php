@@ -24,10 +24,25 @@
 
     <main>
         {{-- jumbotron section --}}
-        <section class="jumbotron_">
+        <section class="jumbotron_"></section>
 
-            {{-- section cards --}}
-        </section class="cards_">
+        {{-- section cards --}}
+        <section class="cards_">
+            <div class="container">
+                <div class="row ">
+                    @foreach ($comics as $comic)
+                        <div class="col-2">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{{ $comic['thumb'] }}" class="comic_img " alt="{{ $comic['title'] }}">
+                                <h5 class="card-title">{{ $comic['title'] }}</h5>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+            </div>
+            </div>
+        </section>
     </main>
 
     {{-- collego il footer  --}}

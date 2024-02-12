@@ -5,7 +5,7 @@
             <ul>
                 @foreach ($links as $link)
                     <li>
-                        <a>{{ $link }}</a>
+                        <a href="{{ $link['page'] }}">{{ $link['title'] }}</a>
                     </li>
                 @endforeach
             </ul>
