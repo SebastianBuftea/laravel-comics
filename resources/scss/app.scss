@@ -1,1 +1,41 @@
 @import '~bootstrap/scss/bootstrap';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+
+    header {
+        display: flex;
+        justify-content: center;
+        margin: 10px 100px;
+        font-size: xx-small;
+
+        img {
+            width: 60px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            ul {
+                list-style: none;
+                display: flex;
+
+                li {
+                    margin: 0px 10px;
+                    text-decoration: none;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: large;
+                    }
+                }
+            }
+        }
+    }
+}
