@@ -10,7 +10,7 @@
     header {
         display: flex;
         justify-content: center;
-        margin: 10px 100px;
+        margin: 10px 200px;
         font-size: xx-small;
 
         img {
@@ -39,23 +39,35 @@
         }
     }
 
-    .jumbotron_ {
-        background-image: url('../img/jumbotron.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100vw;
-        height: 45vh;
-    }
+    main {
+        background-color: rgb(36, 36, 36);
 
-    .cards_ {
-        margin: 10px 100px;
+        .jumbotron_ {
+            background-image: url('../img/jumbotron.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 45vh;
+        }
 
-    }
+        .cards_ {
+            margin: 10px 200px;
+            color: white;
 
-    .comic_img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
+            .card_style {
+                width: 150px;
+                background-color: transparent;
+                color: white;
+
+                .comic_img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+
+                }
+            }
+        }
+
 
     }
 }

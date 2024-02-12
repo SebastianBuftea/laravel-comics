@@ -28,11 +28,11 @@
 
         {{-- section cards --}}
         <section class="cards_">
-            <div class="container">
+            <div class="container my-3">
                 <div class="row ">
                     @foreach ($comics as $comic)
                         <div class="col-2">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card my-2 card_style">
                                 <img src="{{ $comic['thumb'] }}" class="comic_img " alt="{{ $comic['title'] }}">
                                 <h5 class="card-title">{{ $comic['title'] }}</h5>
                             </div>
@@ -41,7 +41,7 @@
                 </div>
 
             </div>
-            </div>
+
         </section>
     </main>
 
