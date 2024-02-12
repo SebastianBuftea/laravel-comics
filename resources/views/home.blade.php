@@ -22,6 +22,16 @@
     {{-- collego l'header  --}}
     @include('partials.header')
 
+    <main>
+        {{-- jumbotron section --}}
+        <section class="jumbotron_">
+
+        </section>
+    </main>
+
+    {{-- collego il footer  --}}
+    @include('partials.footer')
+
 </body>
 
 </html>
