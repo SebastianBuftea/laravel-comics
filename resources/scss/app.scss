@@ -24,6 +24,7 @@
             ul {
                 list-style: none;
                 display: flex;
+                margin: 0;
 
                 li {
                     margin: 0px 10px;
@@ -51,7 +52,7 @@
         }
 
         .cards_ {
-            margin: 10px 200px;
+            margin: 0px 200px;
             color: white;
 
             .card_style {
@@ -69,5 +70,55 @@
         }
 
 
+    }
+
+    footer {
+
+        color: white;
+
+        .upper_footer {
+            background-color: rgb(47, 47, 255);
+            padding: 50px 0px;
+
+
+            & img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .row_ {
+                margin: 0px 200px;
+                display: flex;
+
+                .line_ {
+                    height: 20px;
+                }
+
+            }
+        }
+
+        .inferior_footer {
+            background-image: url('../img/footer-bg.jpg');
+
+            .row_ {
+                margin: 0px 200px;
+                display: flex;
+
+                h5 {
+                    font-weight: 600;
+                }
+
+                div {
+                    font-size: small;
+                }
+
+                .container_logo {
+                    height: 450px;
+                    background-image: url('../img/dc-logo-bg.png');
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+        }
     }
 }

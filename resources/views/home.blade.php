@@ -31,6 +31,7 @@
         <section class="cards_ d-flex justify-content-center align-center">
             <h2 class="m-5">''qui si vedranno le comics''</h2>
         </section>
+
     </main>
 
     {{-- collego il footer  --}}
