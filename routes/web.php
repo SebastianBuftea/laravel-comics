@@ -15,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $links = config('db.links');
-
     return view('home', compact('links'));
-});
+})->name('/');
 
 
 Route::get('/comics', function () {
@@ -25,3 +24,14 @@ Route::get('/comics', function () {
     $links = config('db.links');
     return view('comics', compact('comics', 'links'));
 })->name('comics');
+
+Route::get('/comics/{param}', function ($id) {
+    $comics = config('db.comics');
+    $links = config('db.links');
+    foreach ($comics as $comic) {
+        if ($comic['id'] == $id) {
+            $item = $comic;
+        }
+    }
+    return view('detail_comic', compact('comics', 'item', 'links'));
+})->name('detail-comic');

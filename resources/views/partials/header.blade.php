@@ -4,7 +4,7 @@
         <ul>
             @foreach ($links as $link)
                 <li>
-                    <a href="{{ $link['page'] }}">{{ $link['title'] }}</a>
+                    <a href="{{ route($link['page']) }}">{{ $link['title'] }}</a>
                 </li>
             @endforeach
         </ul>

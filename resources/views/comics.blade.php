@@ -1,41 +1,21 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-    {{-- collego l'header  --}}
-    @include('partials.header')
-
+@extends('layout.app')
+@section('content')
     <main>
         {{-- jumbotron section --}}
         <section class="jumbotron_"></section>
 
         {{-- section cards --}}
         <section class="cards_">
-            <div class="container my-3">
+            <div class="container py-3">
                 <div class="row ">
                     @foreach ($comics as $comic)
                         <div class="col-2">
-                            <div class="card my-2 card_style">
-                                <img src="{{ $comic['thumb'] }}" class="comic_img " alt="{{ $comic['title'] }}">
-                                <h5 class="card-title">{{ $comic['title'] }}</h5>
-                            </div>
+                            <a href="{{ route('detail-comic', ['param' => $comic['id']]) }}">
+                                <div class="card my-2 card_style">
+                                    <img src="{{ $comic['thumb'] }}" class="comic_img " alt="{{ $comic['title'] }}">
+                                    <h5 class="card-title">{{ $comic['title'] }}</h5>
+                                </div>
+                            </a>
                         </div>
                     @endforeach
                 </div>
@@ -44,10 +24,4 @@
 
         </section>
     </main>
-
-    {{-- collego il footer  --}}
-    @include('partials.footer')
-
-</body>
-
-</html>
+@endsection
